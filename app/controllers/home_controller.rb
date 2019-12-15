@@ -19,4 +19,7 @@ class HomeController < ApplicationController
 
   def trade
   end
+
+  def edit
+  end
 end

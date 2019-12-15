@@ -1,0 +1,23 @@
+.top {
+  text-align: center;
+  border-bottom: 1px solid;
+}
+a {
+  padding: 20px 40px;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff6347;
+}
+span {
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid #fff;
+  padding: 5px 7px 3px 7px;
+}
+
+.person {
+  border: 2px solid #deb887;
+  margin-top: 20px;
+}

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/people' => "home#people"
   get '/people/info' => "home#info"
   get '/trade/' => "home#trade"
+  get '/personal/edit' => "home#edit"
   #personalとかtradeのところはidを振ります。ひかるんがDBつくってくれたら反映します。
 
 end
