@@ -1,2 +1,0 @@
-class Utxo < ApplicationRecord
-end
