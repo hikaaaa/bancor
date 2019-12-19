@@ -1,0 +1,20 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">購入する</h1>
+    <%= form_tag("/token/create") do %>
+      <div class="form">
+        <div class="form-body">
+
+          <p>email</p>
+          <input name="email" value=''>
+
+          <p>supply</p>
+          <input name="supply" value="">
+          <p>reserve_amount</p>
+          <input  name="reserve_amount" value="">
+          <input type="submit" value="発行">
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
