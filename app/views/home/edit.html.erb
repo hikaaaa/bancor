@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="">
+    <title>マイページの編集</title>
+</head>
+
+<body>
+  <h1>マイページの変更</h1>
+
+  <form class="form" action="" method="post">　<! action=""のところにCGIのURIを入れる>
+    <p>名前：<input type="text" name="name"></p>
+    <p>自己紹介：</p>
+    <textarea name="intro" rows="5" cols="80"></textarea>
+
+    <p>提供内容：</p>
+    <textarea name="service" rows="5" cols="80"></textarea>
+    <p>発行時間： <input type="text" name="time">秒</p>
+
+    <input type="reset"  value="リセット">
+    <input type="submit"  value="保存">
+
+  </form>
+
+</body>
+</html>

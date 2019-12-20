@@ -1,5 +1,5 @@
 class TokenController < ApplicationController
-  def new 
+  def new
   end
 
   #トークンの発行のアルゴリズム
@@ -13,7 +13,7 @@ class TokenController < ApplicationController
     cw=params[:cw].to_f
     user.price=reserve/time/cw
     user.save
-    redirect_to("/")
+    redirect_to("/personal/")
   end
 
   def index
@@ -30,8 +30,8 @@ class TokenController < ApplicationController
 
   def buy_do
     user=User.find_by(id: params[:id])
-    # R=user_seller.reserve 
-    # S=user_seller.supply 
+    # R=user_seller.reserve
+    # S=user_seller.supply
     # F=user_seller.cw
     # T0=params[:bought_time].to_f
     # E=R*((1+T/S)**(1/F)-1)  #支払金額
@@ -47,7 +47,7 @@ class TokenController < ApplicationController
     user_seller.price=R/T/F
     user_seller.save
     ################################
-    
+
     email=params[:my_mail]
     id=user_
     #### add utxo ######
@@ -55,5 +55,5 @@ class TokenController < ApplicationController
     utxo.save
 
   end
-    
+
 end
