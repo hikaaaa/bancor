@@ -1,18 +1,16 @@
 <div class="main posts-new">
   <div class="container">
     <h1 class="form-heading">購入する</h1>
-    <%= form_tag("/token/create") do %>
+    <%= form_tag("/token/#{@user.id}/buy") do %>
       <div class="form">
         <div class="form-body">
-
-          <p>email</p>
-          <input name="email" value=''>
-
-          <p>supply</p>
-          <input name="supply" value="">
-          <p>reserve_amount</p>
-          <input  name="reserve_amount" value="">
-          <input type="submit" value="発行">
+        <p> 自分のメールアドレス </p>
+        <input name='my_mail' value=''>
+        <p> 金額/分</p>
+        <%= @user.price %>
+          <p>購入金額</p>
+          <input name="bought_time" value="">
+          <input type="submit" value="購入">
         </div>
       </div>
     <% end %>

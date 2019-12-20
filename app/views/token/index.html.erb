@@ -1,2 +1,22 @@
-<h1>Token#index</h1>
-<p>Find me in app/views/token/index.html.erb</p>
+<div class="main posts-index">
+  <div class="container">
+    <% @users.each do |user| %>
+
+     <% if user.cw != nil %>
+      <div class="posts-index-item">       
+        </div>
+        <div class="post-right">
+          <div class="post-user-name">
+            <%= link_to(user.email, "/token/#{user.id}") %> 
+          </div>
+          金額/分
+          <%= user.price %>
+          <p>発行時間</p>
+          <%= user.supply%>
+          
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

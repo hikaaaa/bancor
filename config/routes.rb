@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   
   get '/token/new' => "token#new"
   post '/token/create' => 'token#create'
-
+  get '/token/:id/buy' => 'token#buy'
+  get 'token/index' => 'token#index'
+  get '/token/:id' => 'token#show'
 
   get '/' => "home#top"
+  get '/token/:id/buy' => 'token#buy'
+  post '/token/:id/buy' => 'token#buy_do'
 end
