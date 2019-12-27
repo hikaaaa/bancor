@@ -1,0 +1,89 @@
+body{
+	font: 14px/1.9 'Noto Sans JP', Arial, Verdana, 游ゴシック, YuGothic,'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ, Meiryo,sans-serif;
+	font-weight: 300;
+	-webkit-text-size-adjust:100%;
+	overflow-x: hidden;
+	color: #fff;
+	background: #fff;
+}
+
+a{
+	color: #0066ff;
+	text-decoration: none;
+}
+
+a:hover, .active{
+  text-decoration: underline;
+}
+
+a:active, a:focus,input:active, input:focus{outline:0;}
+
+
+#header{
+	position: relative;
+    overflow:hidden;
+    width:100%;
+    height:300px;
+}
+
+#header img{
+    position:absolute;
+    left:50%;
+    width:1280px;
+    height:300px;
+    margin-left:-640px;
+}
+
+#slogan{
+	position: absolute;
+  top: 50%;
+	width: 100%;
+	-webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+	color: #fff;
+	line-height: 1.2;
+	text-align: center;
+}
+
+#slogan h1{
+	font-size: 40px;
+	font-family: 'Pacifico', cursive;
+	margin-bottom: 20px;
+	font-weight:normal;
+}
+
+.brand_info p{
+  color: #000;
+}
+
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.sell {
+  background-color: #f00;
+  margin-right: 10px;
+}
+
+
+.buy {
+  background-color: #0f0;
+}
+
+
+.btn-wrapper {
+  margin: 20px 0;
+}
+
+
+.btn-wrapper p {
+  margin: 10px 0;
+}
