@@ -1,0 +1,17 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">購入する</h1>
+    <%= form_tag("/token/yen2token") do %>
+      <div class="form">
+        <div class="form-body">
+        <p> 自分のメールアドレス </p>
+        <input name='email' value=''>
+        
+          <p>購入金額</p>
+          <input name="ammount" value="">
+          <input type="submit" value="購入">
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
