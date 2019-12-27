@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/personal/edit' => "home#edit"
   #personalとかtradeのところはidを振ります。ひかるんがDBつくってくれたら反映します。
 
+
  
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -25,5 +26,7 @@ Rails.application.routes.draw do
   get '/' => "home#top"
   get '/token/:id/buy' => 'token#buy'
   post '/token/:id/buy' => 'token#buy_do'
+
   get '/token/:id' => 'token#show'
+
 end
