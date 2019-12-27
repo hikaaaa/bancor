@@ -3,6 +3,8 @@ class TokenController < ApplicationController
   end
 
   #トークンの発行のアルゴリズム
+  #トークンの識別子はUSERID担っている．
+  #time tokenの識別子のみを０にする
   def create
     user=User.find_by(email: params[:email])
     user.cw=params[:cw]
@@ -22,10 +24,12 @@ class TokenController < ApplicationController
 
   def buy
     @user=User.find_by(id: params[:id])
+
   end
 
   def show
     @user=User.find_by(id: params[:id])
+    render("token/show")
   end
 
   def buy_do
@@ -50,10 +54,23 @@ class TokenController < ApplicationController
     buy_id=buy_user.id
     
     #### add utxo ######
-    utxo=Utxo.new(email: buy_email, token: buy_id, ammount: 30)
+    utxo=Utxo.new(email: buy_email, token: buy_id, ammount: t-t0)
     utxo.save
     redirect_to("/")
 
   end
     
+
+  def yen2token
+  end
+
+  def publish_time_token
+    email=params[:email]
+    ammount=params[:ammount]
+    utxo=Utxo.new(email: email, token:0,ammount:ammount)
+    utxo.save
+    redirect_to('/')
+
+  end
+
 end

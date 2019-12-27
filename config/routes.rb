@@ -18,10 +18,15 @@ Rails.application.routes.draw do
   post '/token/create' => 'token#create'
   get '/token/:id/buy' => 'token#buy'
   get 'token/index' => 'token#index'
-  get '/token/:id' => 'token#show'
+
+
+  get '/token/yen2token' => 'token#yen2token'
+  post '/token/yen2token' => 'token#publish_time_token'
 
   get '/' => "home#top"
   get '/token/:id/buy' => 'token#buy'
   post '/token/:id/buy' => 'token#buy_do'
+
+  get '/token/:id' => 'token#show'
 
 end
