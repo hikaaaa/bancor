@@ -1,9 +1,16 @@
 class HomeController < ApplicationController
+  def top
+    @users = User.all
+  end
+
   def log_in
-  #  user=User.find_by(email: params[:email])
-  #  user.password=params[:password]
-  #  user.save
-  #  redirect_to("/personal/")
+  end
+
+  def log_in_do
+    user = User.find_by(email: params[:email])
+    if user.password == params[:password] then
+      redirect_to("/personal")
+    end
   end
 
   def register
@@ -16,5 +23,4 @@ class HomeController < ApplicationController
     user.save
     redirect_to("/personal")
   end
-
 end
