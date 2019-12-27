@@ -3,6 +3,8 @@ class TokenController < ApplicationController
   end
 
   #トークンの発行のアルゴリズム
+  #トークンの識別子はUSERID担っている．
+  #time tokenの識別子のみを０にする
   def create
     user=User.find_by(email: params[:email])
     user.cw=params[:cw]
@@ -22,37 +24,52 @@ class TokenController < ApplicationController
 
   def buy
     @user=User.find_by(id: params[:id])
+
   end
 
   def show
     @user=User.find_by(id: params[:id])
+    render("token/show")
   end
 
   def buy_do
-    user=User.find_by(id: params[:id])
-    # R=user_seller.reserve
-    # S=user_seller.supply
-    # F=user_seller.cw
-    # T0=params[:bought_time].to_f
-    # E=R*((1+T/S)**(1/F)-1)  #支払金額
-    # T=S*((1+E/R)**(F)-1) #新たなサプライ
-    # R=R+E #新たなリザーブ
-    #E=(user.reserve)*((1+(params[:bought_time].to_f)/(user.supply)**(1/user.cw)-1)
-    #R=user.reserve+E
-    #T=user.supply((1+E/user.reserve)**(user.cw)-1)
-    user_seller_id=user_seller.id
-    ##### token data update #######
-    user_seller.reserve=R
-    user_seller.supply=T
-    user_seller.price=R/T/F
-    user_seller.save
-    ################################
+    sell_id=params[:id]
+    sell_user=User.find_by(id: sell_id)
+    r=sell_user.reserve
+    s=sell_user.supply
+    f=sell_user.cw
+    t0=params[:bought_time].to_f
+    e=r*((1+t0/s)**(1/f)-1)  #支払金額
+    t=s*((1+e/r)**(f)-1) #新たなサプライ
+    r=r+e #新たなリザーブ
 
-    email=params[:my_mail]
-    id=user_
+    ##### token data update #######
+    sell_user.reserve=r
+    sell_user.supply=t
+    sell_user.price=r/t/f
+    sell_user.save
+    ################################
+    buy_user=User.find_by(email: params[:my_mail])
+    buy_email=buy_user.email
+    buy_id=buy_user.id
+    
     #### add utxo ######
-    utxo=Utxo.new(email: email, token: user_seller_id, ammount: T0)
+    utxo=Utxo.new(email: buy_email, token: buy_id, ammount: t-t0)
     utxo.save
+    redirect_to("/")
+
+  end
+    
+
+  def yen2token
+  end
+
+  def publish_time_token
+    email=params[:email]
+    ammount=params[:ammount]
+    utxo=Utxo.new(email: email, token:0,ammount:ammount)
+    utxo.save
+    redirect_to('/')
 
   end
 
