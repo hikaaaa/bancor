@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   background-color: ;
 }
@@ -32,17 +33,24 @@ nav a:hover {
   color: #ff6347;
 }
 
+=======
+>>>>>>> 6c4e07bc94c7fd2a00fad4b043bd393e373cf0a5
 p {
 
 }
 
 .top {
+<<<<<<< HEAD
   border-bottom: 4px solid #A7F1FF;
   margin-bottom: 50px;
+=======
+  border-bottom: 1px solid;
+>>>>>>> 6c4e07bc94c7fd2a00fad4b043bd393e373cf0a5
   text-align: center;
 
 }
 span {
+<<<<<<< HEAD
   border-top: 4px solid #A7F1FF;
   border-left: 4px solid #A7F1FF;
   border-right: 4px solid #A7F1FF;
@@ -51,6 +59,15 @@ span {
   border-radius: 7px 7px 0px 0px;
 }
 .top a {
+=======
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid #fff;
+  padding: 5px 5px 3px 5px;
+}
+a {
+>>>>>>> 6c4e07bc94c7fd2a00fad4b043bd393e373cf0a5
   padding: 20px 40px;
   text-decoration: none;
 }
@@ -58,9 +75,15 @@ a:hover {
   color: #ff6347;
 }
 
+<<<<<<< HEAD
 
 h2 {
   text-align: center;
+=======
+h2 {
+  text-align: center;
+  padding-top: 20px;
+>>>>>>> 6c4e07bc94c7fd2a00fad4b043bd393e373cf0a5
   padding-bottom: 0px;
 }
 button {
@@ -68,6 +91,7 @@ button {
   font-size: 15px;
   float: right;
   margin-bottom: -1px;
+<<<<<<< HEAD
   font-weight: bold;
   background-color: #248;
   color: #fff;
@@ -77,6 +101,8 @@ button {
 button:hover {
   background-color: #24d;
   color: #fff;
+=======
+>>>>>>> 6c4e07bc94c7fd2a00fad4b043bd393e373cf0a5
 }
 
 .profile {
@@ -100,11 +126,18 @@ button:hover {
 }
 
 .service {
+<<<<<<< HEAD
   border-top: 2px solid #A7F1FF;
+=======
+  border-top: 1px solid ;
+>>>>>>> 6c4e07bc94c7fd2a00fad4b043bd393e373cf0a5
   padding-left: 150px;
 }
 .content {
   font-size: 30px;
+<<<<<<< HEAD
   margin-top: 30px;
   margin-bottom: 30px;
+=======
+>>>>>>> 6c4e07bc94c7fd2a00fad4b043bd393e373cf0a5
 }

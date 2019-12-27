@@ -51,4 +51,27 @@ class HomeController < ApplicationController
     redirect_to("/login")
   end
 
+<<<<<<< HEAD
+=======
+  def signup
+  end
+
+  def personal
+  end
+
+  def assets
+  end
+
+  def people
+  end
+
+  def info
+  end
+
+  def trade
+  end
+
+  def edit
+  end
+>>>>>>> 6c4e07bc94c7fd2a00fad4b043bd393e373cf0a5
 end
