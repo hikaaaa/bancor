@@ -1,0 +1,15 @@
+<div class="main posts-new">
+  <div class="container">
+
+      <div class="form">
+        <div class="form-body">
+
+          <p> <%= @user.email %> </p>
+          <p> <%= @user.price %> </p>
+          <p> <%= @user.supply %> </p>
+          <%= link_to("購入","/token/#{@user.id}/buy") %>
+        </div>
+      </div>
+    
+  </div>
+</div>
