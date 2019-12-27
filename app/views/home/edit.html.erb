@@ -2,17 +2,26 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./assets/stylesheets/edit.css">
     <title>マイページの編集</title>
 </head>
 
 <body>
+  <nav>
+    <ul>
+      <li><a href="">New Token</a></li>
+      <li><a href="brand_list.html">Brand</a></li>
+      <li class="current"><a href="Mypage.html">Mypage</a></li>
+      <li><a href="">Home</a></li>
+    </ul>
+  </nav>
+
   <h1>マイページの変更</h1>
 
   <form class="form" action="" method="post">　<! action=""のところにCGIのURIを入れる>
-    <p>名前：<input type="text" name="name"></p>
+    <p>名前：<input type="text" name="name"　value="名前"></p>
     <p>自己紹介：</p>
-    <textarea name="intro" rows="5" cols="80"></textarea>
+    <textarea name="intro" rows="5" cols="80"　value="自己紹介"></textarea>
 
     <p>提供内容：</p>
     <textarea name="service" rows="5" cols="80"></textarea>

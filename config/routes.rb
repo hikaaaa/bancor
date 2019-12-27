@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   get '/' => "home#top"
   get '/about' => "home#about"
-  get '/login' => "home#log_in"
-  post '/login' => "home#log_in_do"
+
+  get '/login' => "home#login_form"
+  post '/login' => "home#login"
+
+  post '/logout' => "home#logout"
+
   get '/register-tel/' => "home#register_tel"
   get '/register/' => "home#register"
   post '/register' => "home#register_do"
