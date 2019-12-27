@@ -1,5 +1,5 @@
 class TokenController < ApplicationController
-  def new 
+  def new
   end
 
   #トークンの発行のアルゴリズム
@@ -15,7 +15,7 @@ class TokenController < ApplicationController
     cw=params[:cw].to_f
     user.price=reserve/time/cw
     user.save
-    redirect_to("/")
+    redirect_to("/personal/")
   end
 
   def index

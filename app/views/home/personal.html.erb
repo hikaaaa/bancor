@@ -1,4 +1,62 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
+
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <link rel="stylesheet" href="./assets/stylesheets/personal.css">
+      <title>MyPage</title>
+  </head>
+  <body>
+    <% if session[:user_id] %>
+    <nav>
+    <ul>
+      <li><%= session[:user_id] %></li>
+      <li><a href="">New Token</a></li>
+      <li><a href="./people">Brand</a></li>
+      <li class="current"><a href="./personal">Mypage</a></li>
+      <li><a href="../">Home</a></li>
+    </ul>
+  </nav>
+
+    <h1>マイページ</h1>
+    <div class="top">
+      <span>プロフィール</span>
+      <%= link_to"保有資産", "personal/assets/" %>
+    </div>
+
+    <h2>名前（編集可）</h2>　<!名前とかはDBから取り出すと思うけどよくわからん>
+
+    <button type="button" onclick="location.href='/personal/edit/'">編集する</button>
+
+
+
+    <div class="profile">
+      ここにプロフィールを書きます<br>
+      ここにプロフィールを書きます<br>
+      ここにプロフィールを書きます<br>
+      <br>
+      <br>
+    </div>
+
+
+    <%= current_user = User.find_by(id: session[:user_id]) %>
+    <p class="value">現在１秒あたり？円</p>
+    <p class="time">発行時間：<% current_user.email %>秒（編集可）</p>
+    <p class="capitalization">時価総額？円</p><br>
+
+
+
+    <div class="service">
+      <p class="content">
+        提供内容
+        ここに提供内容を書きます
+        ここに提供内容を書きます
+      </p>
+    </div>
+    <% end %>
+  </body>
+=======
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -41,5 +99,6 @@
 </div>
 
 </body>
+>>>>>>> 6c4e07bc94c7fd2a00fad4b043bd393e373cf0a5
 
 </html>
