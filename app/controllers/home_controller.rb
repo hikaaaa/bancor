@@ -51,8 +51,6 @@ class HomeController < ApplicationController
     redirect_to("/login")
   end
 
-<<<<<<< HEAD
-=======
   def signup
   end
 
@@ -73,5 +71,7 @@ class HomeController < ApplicationController
 
   def edit
   end
->>>>>>> 6c4e07bc94c7fd2a00fad4b043bd393e373cf0a5
+  
+  def about
+  end
 end
