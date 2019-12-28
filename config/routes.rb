@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
 
 
-  get '/signup/' => "home#signup"
+  get '/signup' => "home#signup"
   get '/personal/' => "home#personal"
   get '/personal/assets' => "home#assets"
   get '/people' => "home#people"

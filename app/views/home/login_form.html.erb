@@ -5,8 +5,15 @@
 <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
+<% if @error_message %>
+	<div class='form-error'>
+	<%= @error_message	%>
+	<div/>
+	<%end%>
 <div class="form-wrapper">
 	<h1>Log In</h1>
+	
+
 	<%= form_tag("/login") do %>
 		<div class="form-item">
 			<label for="email"></label>
