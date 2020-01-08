@@ -56,6 +56,12 @@ class HomeController < ApplicationController
   end
 
   def personal
+    @user=User.find_by(id: session[:user_id])
+    price=@user.price
+    supply=@user.supply
+    time=@user.time
+    @price_time=price*supply/time
+    @total=price*supply
   end
 
   def assets
@@ -71,8 +77,26 @@ class HomeController < ApplicationController
   end
 
   def edit
+
   end
   
   def about
   end
+
+  def edit_profile
+    user=User.find_by(id: params[:id])
+    if params[:name]
+      user.username=params[:name]
+    end
+    if params[:intro]
+      user.profile=params[:intro]
+    end
+    if params[:time]
+      user.time=params[:time].to_i
+    end
+    user.save
+    redirect_to("/personal")
+  end
+  
+
 end

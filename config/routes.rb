@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get '/personal/edit' => "home#edit"
   #personalとかtradeのところはidを振ります。ひかるんがDBつくってくれたら反映します。
 
+  post "/personal/edit/:id" => 'home#edit_profile'
  
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

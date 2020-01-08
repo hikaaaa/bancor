@@ -2,16 +2,11 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<<<<<<< HEAD
     <link rel="stylesheet" href="./assets/stylesheets/edit.css">
-=======
-    <link rel="stylesheet" href="">
->>>>>>> 6c4e07bc94c7fd2a00fad4b043bd393e373cf0a5
     <title>マイページの編集</title>
 </head>
 
 <body>
-<<<<<<< HEAD
   <nav>
     <ul>
       <li><a href="">New Token</a></li>
@@ -23,27 +18,25 @@
 
   <h1>マイページの変更</h1>
 
+  
+    <%= form_tag("/personal/edit/#{session[:user_id]}") do %>
   <form class="form" action="" method="post">　<! action=""のところにCGIのURIを入れる>
-    <p>名前：<input type="text" name="name"　value="名前"></p>
+
+
+    <p>ユーザーネーム：<input type="text" name="name"　value="名前"></p>
     <p>自己紹介：</p>
     <textarea name="intro" rows="5" cols="80"　value="自己紹介"></textarea>
-=======
-  <h1>マイページの変更</h1>
-
-  <form class="form" action="" method="post">　<! action=""のところにCGIのURIを入れる>
-    <p>名前：<input type="text" name="name"></p>
-    <p>自己紹介：</p>
-    <textarea name="intro" rows="5" cols="80"></textarea>
->>>>>>> 6c4e07bc94c7fd2a00fad4b043bd393e373cf0a5
 
     <p>提供内容：</p>
     <textarea name="service" rows="5" cols="80"></textarea>
-    <p>発行時間： <input type="text" name="time">秒</p>
+    <p>発行時間： <input type="text" name="time">分</p>
 
     <input type="reset"  value="リセット">
     <input type="submit"  value="保存">
 
-  </form>
 
+
+  </form>
+  <%end%>
 </body>
 </html>

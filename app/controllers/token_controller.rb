@@ -12,6 +12,7 @@ class TokenController < ApplicationController
     user.supply=params[:supply]
     reserve=params[:reserve_amount].to_f
     time=params[:supply].to_f
+    user.time=time.to_i
     cw=params[:cw].to_f
     user.price=reserve/time/cw
     user.save
